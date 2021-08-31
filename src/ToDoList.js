@@ -19,9 +19,10 @@ export default function ToDoList() {
     console.log(todos);
     return (
         <>
-            <label htmlFor="addToDo"> Add ToDo: </label>
-            <input ref={inputRef} type="text" name="addToDo" id="addToDo" placeholder="add to do here..."/>
-            <input onClick={clickHandler} type="submit" value="submit" id="submit"/>
+            <label htmlFor="addToDo"> What do you need to do? </label>
+            <input ref={inputRef} type="text" name="addToDo" id="addToDo" placeholder="add todo here..." />
+            <input onClick={clickHandler} type="submit" value="SAVE" id="submit"/>
+            <br></br>
             < ToDo todos={todos}/>
         </>
     );

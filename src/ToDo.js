@@ -3,15 +3,15 @@ import React from 'react';
 export default function ToDo(props) {
     const todos = props.todos;
     return (
-        <ul>
+        <div>
             {
                 todos.map((todo) => (
-                    <li key={todo.name}>
+                    <div key={todo.name}>
                         <input type="checkbox" checked={todo.complete}/>
                         {todo.name}
-                    </li>
+                    </div>
                 ))
             }
-        </ul>
+        </div>
     );
 };
