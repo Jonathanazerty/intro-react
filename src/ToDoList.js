@@ -1,5 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import ToDo from './ToDo';
+import { v4 as uuidv4 } from "uuid";
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
@@ -23,7 +24,7 @@ export default function ToDoList() {
 
     function clickHandler() {
         const input = inputRef.current.value;
-        setTodos([...todos, {name: input, id: 1}]);
+        setTodos([...todos, {name: input, id: uuidv4(), completed: false }]);
     }
 
     console.log(todos);
