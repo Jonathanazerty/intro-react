@@ -1,6 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import ToDo from './ToDo';
 
+const LOCAL_STORAGE_KEY = 'todoApp.todos';
 
 export default function ToDoList() {
     const initialTodos = [
@@ -11,6 +12,15 @@ export default function ToDoList() {
     const inputRef = useRef();
     const [todos, setTodos] = useState(initialTodos);
 
+    useEffect(() => {
+        const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+        if (storedTodos) setTodos (storedTodos);
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
+    }, [todos])
+
     function clickHandler() {
         const input = inputRef.current.value;
         setTodos([...todos, {name: input, id: 1}]);
@@ -19,7 +29,7 @@ export default function ToDoList() {
     console.log(todos);
     return (
         <>
-            <label htmlFor="addToDo"> What do you need to do? </label>
+            <label htmlFor="addToDo" id="what2do"> What do you need to do? </label>
             <input ref={inputRef} type="text" name="addToDo" id="addToDo" placeholder="add todo here..." />
             <input onClick={clickHandler} type="submit" value="SAVE" id="submit"/>
             <br></br>

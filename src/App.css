@@ -5,6 +5,9 @@
 .App-logo {
   height: 20vmin;
   pointer-events: none;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 4px 4px 4px #0a0b0e;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -58,6 +61,10 @@
   border: none;
   border-radius: 10%;
   box-shadow: 4px 4px 4px #0a0b0e;
+}
+
+#what2do{
+  color: rgb(238, 238, 94);
 }
 
 h1{
