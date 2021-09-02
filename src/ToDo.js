@@ -1,17 +1,16 @@
 import React from 'react';
 
-export default function ToDo(props) {
-    const todos = props.todos;
+export default function ToDo({ todo, checkToDo }) {
+    function handleToDoClick() {
+        checkToDo(todo.id)
+    };
+
     return (
         <div>
-            {
-                todos.map((todo) => (
-                    <div key={todo.name}>
-                        <input type="checkbox" checked={todo.complete}/>
-                        {todo.name}
-                    </div>
-                ))
-            }
+            <label>
+                <input type="checkbox" checked = {todo.complete} onChange = {handleToDoClick}/>
+                {todo.name}
+            </label>
         </div>
     );
 };
