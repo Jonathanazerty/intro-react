@@ -26,11 +26,22 @@
   color: #61dafb;
 }
 
-#submit, #clear{
+#submit{
   margin-top: 10px;
   background-color: #61dafb;
   color: rgb(24, 24, 124);
-  padding: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 4px 4px 4px #0a0b0e;
+  font-weight: bold;
+}
+
+#clear{
+  margin-top: 5px;
+  background-color: #61dafb;
+  color: rgb(24, 24, 124);
+  padding: 10px;
   border: none;
   border-radius: 10%;
   box-shadow: 4px 4px 4px #0a0b0e;
@@ -51,6 +62,12 @@
 
 #what2do{
   color: rgb(238, 238, 94);
+}
+
+#number{
+  color: rgb(151, 109, 31);
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 h1{

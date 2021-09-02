@@ -1,5 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react';
-import mapToDos from './mapToDos';
+import MapToDos from './MapToDos';
 import { v4 as uuidv4 } from "uuid";
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
@@ -46,9 +46,8 @@ export default function ToDoList() {
             <input ref={inputRef} type="text" name="addToDo" id="addToDo" placeholder="add todo here..." />
             <input onClick={clickHandler} type="submit" value="SAVE" id="submit"/>
             <button onClick={clearCheckedToDos} id="clear"> Clear ✔️ ToDo's</button>
-            <div> Stop procrastinating, {todos.filter(todo => !todo.complete).lengte} still to do !</div>
-            <br></br>
-            < mapToDos todos={todos} checkToDo={checkToDo}/>
+            <div id="number"><i>Stop procrastinating, still {todos.filter(todo => !todo.complete).length} to do !</i> </div>
+            < MapToDos todos={todos} checkToDo={checkToDo}/>
         </>
     );
 
