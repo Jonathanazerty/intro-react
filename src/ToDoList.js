@@ -1,5 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react';
-import MapToDos from './MapToDos';
+import MapToDos from './MapToDos.js';
 import { v4 as uuidv4 } from "uuid";
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos';
