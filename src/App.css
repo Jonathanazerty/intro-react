@@ -12,7 +12,7 @@
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1d1d52;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 #submit{
   margin-top: 10px;
   background-color: #61dafb;
-  color: rgb(24, 24, 124);
+  color: #1a4a5a;
   padding: 10px;
   border: none;
   border-radius: 10%;
@@ -40,12 +40,27 @@
 #clear{
   margin-top: 5px;
   background-color: #61dafb;
-  color: rgb(24, 24, 124);
+  color: #1a4a5a;
   padding: 10px;
   border: none;
   border-radius: 10%;
   box-shadow: 4px 4px 4px #0a0b0e;
   font-weight: bold;
+}
+
+.btnToDo, .btnDone{
+  margin-top: 5px;
+  background-color: #5eaa4f;
+  color: #204719;
+  padding: 10px;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 4px 4px 4px #0a0b0e;
+  font-weight: bold;
+}
+
+.counter {
+  color:rgb(238, 238, 94);
 }
 
 #submit:hover, #clear:hover{

@@ -46,7 +46,7 @@ export default function ToDoList() {
             <input ref={inputRef} type="text" name="addToDo" id="addToDo" placeholder="add todo here..." />
             <input onClick={clickHandler} type="submit" value="SAVE" id="submit"/>
             <button onClick={clearCheckedToDos} id="clear"> Clear ✔️ ToDo's</button>
-            <div id="number"><i>Stop procrastinating, still {todos.filter(todo => !todo.complete).length} to do !</i> </div>
+            <div id="number"><i>Stop procrastinating, still {todos.filter(todo => !todo.complete).length} left to do !</i> </div>
             <Map2Dos todos={todos} checkToDo={checkToDo}/>
         </>
     );
